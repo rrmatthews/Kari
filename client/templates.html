@@ -2,8 +2,8 @@
   <title>R's Personal App</title>
 </head>
 
-<template name ="layout">
-  <nav class="navbar navbar-default">
+<template name ="layout" id="navs">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed"
@@ -13,15 +13,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/main">
+        <a class="navbar-brand" href="/home">
           R's Personal App</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse1">
         <ul class="nav navbar-nav">
           <li><a href="{{pathFor 'about'}}">About</a></li>
-          <li><a href="{{pathFor 'songentry'}}">Songs</a></li>
           <li><a href="{{pathFor 'haircare'}}">Hair</a></li>
+
       <!--  </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -35,41 +35,114 @@
   {{> yield}}
 </template>
 
-<!-- Old Version of Navigation
-<template name="layout">
-  <div class="container">
-    <nav class="navbar navbar-default">
-      <h1>R's App</h1>
-      {{> yield}}
-      <hr>
-      <a href="/">home</a>
-      <a href="/about">about</a>
-      <a href="/songentry">Songs</a>
-      <a href="/haircare">Hair</a>
-    </nav>
+<template name="home">
+  <div class=intro>
+    <br>
+    <p>Kari</p>
+    <h3>The Hair App for Black Women</h3>
+    <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/19145860_1605934379448992_6594654147426953514_n.jpg?oh=8b7b1481eb00bc3e02deda3b255b4fc0&oe=59D5EBE9">
   </div>
-</template>
--->
-
-<template name="main">
-  <h1>Home</h1>
-  <p>TEXT!</p>
 </template>
 
 <template name="about">
-  <h1>About this app</h1>
-</template>
-
-<template name="songentry">
-  <h1>Enter Song Information</h1>
-  {{#each s in songlist}}
-    {{s.Title}}--{{s.Artist}}
-  {{/each}}
+  <div class="about">
+    <h1>About This App</h1>
+    <p>But i want to do that for hair and skin products
+      <hr>
+      "Imagine not know what do with your hair
+      but you flip through some categories and a specific list of items come up for you.<br>
+      And like bundles that you may like because you choose a category saying youre willing to wear weave<br>
+      and we can partner with black businesses..I really want it to become like a market for black business."<br>
+      -Kariyana Calloway
+    </p>
+    <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p160x160/13237804_1101221549920280_7137411708343826235_n.jpg?oh=3007631dad96a9f5ecf3156eb0b88071&oe=59E94CB6">
+  <hr>
+  </div>
 </template>
 
 <template name="haircare">
-  <h1>Kari's Hair App Idea</h1>
-  {{#each h in hairline}}
+  <div class="haircare">
+    <h4>Fill out the form below to see a list of results for hair products</h4>
+    What are you looking for?<br>
+    <input type="radio"> Bundles
+    <input type="radio"> Shampoo
+    <input type="radio"> Conditioner
+    <input type="radio"> Oil
+    <input type="radio"> Product
+    <input type="radio"> Accessories
+    <input type="radio"> Hairstyles
+
+    <br>
+    Hair Type
+    <select name="hairtype">
+      <option value="1">1</option>
+      <option value="2A">2A</option>
+      <option value="2B">2B</option>
+      <option value="2C">2C</option>
+      <option value="3A">3A</option>
+      <option value="3B">3B</option>
+      <option value="3C">3C</option>
+      <option value="4A">4A</option>
+      <option value="4B">4B</option>
+      <option value="4C">4C</option>
+    </select>
+
+    <br>Hair Qualities:
+    <input type="checkbox"> Dry
+    <input type="checkbox"> Oily
+    <input type="checkbox"> Breakage
+    <input type="checkbox"> Colored/Dyed
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-group-lg">Submit</button>
+
+    <hr>
+    {{#each h in hairline}}
     Looking for {{h.Looking}} for {{h.Type}} type hair
-  {{/each}}
+    {{/each}}
+    <hr>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>Type</td>
+          <td>Brand</td>
+          <td>Name</td>
+        </tr>
+      </thead>
+      {{#each p in productlist}}
+      <tbody>
+        <tr>
+
+          <td>{{p.Type}}</td>
+          <td>{{p.Brand}}</td>
+          <td>{{p.Name}}</td>
+        </tr>
+      </tbody>
+      {{/each}}
+    </table>
+    <hr>
+  </div>
+
+  <div class="newproduct">
+    <h4>Add Your Product to the Database</h4>
+    Product Type
+    <select name="producttype" id="ptype">
+      <option value="Bundles">Bundles</option>
+      <option value="Shampoo">Shampoo</option>
+      <option value="Conditioner">Conditioner</option>
+      <option value="Oil">Oil</option>
+      <option value="Product">Product</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Hairstyles">Hairstyles</option>
+    </select>
+    <br>
+    Brand:
+    <input type="text" id="brand">
+    <br>
+    Item Name:
+    <input type="text" id="name">
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-group-lg" id="addproduct">Submit</button>
+  </div>
 </template>
