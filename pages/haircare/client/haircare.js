@@ -24,7 +24,7 @@ Template.haircare.events({
 
 Template.haircare.events({
   'click span'(element, instance) {
-    console.log(Products.find().fetch);
-    //Products.remove(this.Product._id);
+  console.log(this.prod._id);
+  Products.remove(this.prod._id);
   }
 })
