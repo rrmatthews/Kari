@@ -19,7 +19,6 @@ Template.haircare.events({
           Type:type,Brand:brand,Name:name
         };
       Meteor.call('Products.insert',prod);
-      //Products.insert({Type:type,Brand:brand,Name:name});
     } else {
       console.log('Invalid Entry...field is blank?');
     }

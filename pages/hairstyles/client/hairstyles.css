@@ -1,0 +1,22 @@
+.hairstyles {
+  text-align: center;
+  font-family: cursive;
+  font-size: 25px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
