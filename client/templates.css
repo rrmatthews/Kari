@@ -32,6 +32,9 @@
   font-size: 10px;
 }
 
+body {
+    background-color: #819fc1;
+}
 @media screen and (max-width: 480px) {
     body {
         background-color: lightgreen;
