@@ -1,44 +1,49 @@
 <template name="haircare">
+  <!--
   <div class="haircare">
-    <h4>Fill out the form below to see a list of results for hair products</h4>
-    What are you looking for?<br>
-    <input type="radio"> Bundles
-    <input type="radio"> Shampoo
-    <input type="radio"> Conditioner
-    <input type="radio"> Oil
-    <input type="radio"> Product
-    <input type="radio"> Accessories
-    <input type="radio"> Hairstyles
+    <form>
+      <h4>Fill out the form below to see a list of results for hair products</h4>
+      What are you looking for?<br>
+      <select name="producttype">
+        <option value="Bundles">Bundles</option>
+        <option value="Shampoo">Shampoo</option>
+        <option value="Conditioner">Conditioner</option>
+        <option value="Oil">Oil</option>
+        <option value="Product">Product</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Hairstyles">Hairstyles</option>
+      </select>
+      <br>
+      Hair Type
+        <select name="hairtype">
+          <option value="1">1</option>
+          <option value="2A">2A</option>
+          <option value="2B">2B</option>
+          <option value="2C">2C</option>
+          <option value="3A">3A</option>
+          <option value="3B">3B</option>
+          <option value="3C">3C</option>
+          <option value="4A">4A</option>
+          <option value="4B">4B</option>
+          <option value="4C">4C</option>
+        </select>
 
-    <br>
-    Hair Type
-    <select name="hairtype">
-      <option value="1">1</option>
-      <option value="2A">2A</option>
-      <option value="2B">2B</option>
-      <option value="2C">2C</option>
-      <option value="3A">3A</option>
-      <option value="3B">3B</option>
-      <option value="3C">3C</option>
-      <option value="4A">4A</option>
-      <option value="4B">4B</option>
-      <option value="4C">4C</option>
-    </select>
-
-    <br>Hair Qualities:
-    <input type="checkbox"> Dry
-    <input type="checkbox"> Oily
-    <input type="checkbox"> Breakage
-    <input type="checkbox"> Colored/Dyed
-    <br>
-    <br>
-    <button type="button" class="btn btn-primary btn-group-lg">Submit</button>
-
+        <br>Hair Qualities:
+        <input type="checkbox"> Dry
+        <input type="checkbox"> Oily
+        <input type="checkbox"> Breakage
+        <input type="checkbox"> Colored/Dyed
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary btn-group-lg">Submit</button>
+      </form>
     <hr>
     {{#each h in hairline}}
     Looking for {{h.Looking}} for {{h.Type}} type hair
     {{/each}}
-    <hr>
+    <hr> -->
+    <div class="database">
+      <h2>Our Database of Products</h2><br>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
@@ -57,26 +62,28 @@
   </div>
 
   <div class="newproduct">
-    <h4>Add Your Product to the Database</h4>
-    Product Type
-    <select name="producttype" id="ptype">
-      <option value="Bundles">Bundles</option>
-      <option value="Shampoo">Shampoo</option>
-      <option value="Conditioner">Conditioner</option>
-      <option value="Oil">Oil</option>
-      <option value="Product">Product</option>
-      <option value="Accessories">Accessories</option>
-      <option value="Hairstyles">Hairstyles</option>
-    </select>
-    <br>
-    Brand:
-    <input type="text" id="brand">
-    <br>
-    Item Name:
-    <input type="text" id="name">
-    <br>
-    <br>
-    <button type="button" class="btn btn-primary btn-group-lg" id="addproduct">Submit</button>
+    <form>
+      <h2>Add Your Product to the Database</h2>
+      Product Type
+      <select name="producttype" id="ptype">
+        <option value="Bundles">Bundles</option>
+        <option value="Shampoo">Shampoo</option>
+        <option value="Conditioner">Conditioner</option>
+        <option value="Oil">Oil</option>
+        <option value="Product">Product</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Hairstyles">Hairstyles</option>
+      </select>
+      <br>
+      Brand:
+      <input type="text" id="brand">
+      <br>
+      Item Name:
+      <input type="text" id="name">
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary btn-group-lg" id="addproduct">Submit</button>
+    </form>
   </div>
 </template>
 
