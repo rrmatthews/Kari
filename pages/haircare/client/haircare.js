@@ -5,7 +5,7 @@ Template.haircare.helpers({
 
 
 Template.haircare.events({
-  'click button' (element, instance) {
+  'click #addproduct' (element, instance) {
     const name = instance.$('#name').val();
     const type = $("#ptype :selected").text();
     const brand = instance.$('#brand').val();
@@ -27,11 +27,19 @@ Template.haircare.events({
 })
 
 Template.haircare.events({
-  'click span'(element, instance) {
+  'click #delete'(element, instance) {
   console.log(this.prod._id);
   var prodID = this.prod._id
 
   Meteor.call('Products.remove',prodID);
   //Products.remove(this.prod._id);
+  }
+})
+
+Template.haircare.events({
+  'click #sorttype'(element, instance) {
+  console.log("hello");
+
+  Meteor.call('Products.sort');
   }
 })

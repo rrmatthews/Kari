@@ -1,6 +1,5 @@
 <template name="haircare">
-  <!--
-  <div class="haircare">
+  <!-- <div class="haircare">
     <form>
       <h4>Fill out the form below to see a list of results for hair products</h4>
       What are you looking for?<br>
@@ -41,15 +40,17 @@
     {{#each h in hairline}}
     Looking for {{h.Looking}} for {{h.Type}} type hair
     {{/each}}
-    <hr> -->
+  </div> -->
+    <hr>
     <div class="database">
       <h2>Our Database of Products</h2><br>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <td>Type</td>
-          <td>Brand</td>
-          <td>Name</td>
+          <td>Type&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sorttype"></span></td>
+          <td>Brand&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortbrand"></span></td>
+          <td>Name&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortname"></span></td>
+          <td>Delete?</td>
         </tr>
       </thead>
       {{#each p in productlist}}
@@ -91,6 +92,7 @@
   <tr>
     <td>{{prod.Type}}</td>
     <td>{{prod.Brand}}</td>
-    <td>{{prod.Name}}&nbsp;&nbsp;<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    <td>{{prod.Name}}</td>
+    <td><span class="glyphicon glyphicon-remove" aria-hidden="true" id="delete"></span></td>
   </tr>
 </template>

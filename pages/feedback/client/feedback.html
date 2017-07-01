@@ -2,25 +2,28 @@
   <div class="feedback">
     <h1>Feedback</h1>
     <h4>Leave us feedback!</h4>
-    <hr>
+    <br>
     <form>
       Name:<br>
       <input type="text" id="name">
       <br>
       <br>
       Feedback:<br>
-      <textarea id="feedbackfield" rows="10" cols="50" placeholder="Enter feedback here!"></textarea>
+      <textarea id="feedbackfield" rows="5" cols="40" placeholder="Enter feedback here!"></textarea>
       <br>
       <button type="button" class="btn btn-primary btn-group-lg">Submit</button>
     </form>
-    <hr>
+
     <div class="feedbackdatabase">
+      <br>
+      <br>
       <h2>Our Feedback List</h2><br>
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <td>Name</td>
             <td>Feedback</td>
+            <td>Delete?</td>
           </tr>
         </thead>
         {{#each f in feedbacklist}}
@@ -37,6 +40,7 @@
 <template name="feedbackrow">
   <tr>
     <td>{{feed.Name}}</td>
-    <td>{{feed.Feedback}}&nbsp;&nbsp;<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+    <td>{{feed.Feedback}}</td>
+    <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
   </tr>
 </template>
