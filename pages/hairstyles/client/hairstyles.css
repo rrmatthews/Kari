@@ -14,9 +14,9 @@
 
 .flex-item {
     background-color: cornflowerblue;
-    width: 250px;
-    height: 250px;
+    width: 600px;
+    height: 360px;
     margin: 50px;
     text-align: center;
-    padding-top: 30px;
+    padding: 20px;
 }

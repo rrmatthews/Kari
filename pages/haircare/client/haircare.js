@@ -28,18 +28,18 @@ Template.haircare.events({
 
 Template.haircare.events({
   'click #delete'(element, instance) {
-  console.log(this.prod._id);
-  var prodID = this.prod._id
+    console.log(this.prod._id);
+    var prodID = this.prod._id
 
-  Meteor.call('Products.remove',prodID);
-  //Products.remove(this.prod._id);
+    Meteor.call('Products.remove',prodID);
+    //Products.remove(this.prod._id);
   }
 })
 
 Template.haircare.events({
   'click #sorttype'(element, instance) {
-  console.log("hello");
-
-  Meteor.call('Products.sort');
+    var sortByType = Products.find({}, {sort: {Type: 1}}).fetch();
+    console.log(sortByType);
+    Meteor.call('Products.sort');
   }
 })
