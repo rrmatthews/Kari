@@ -19,3 +19,5 @@ iron:router
 twbs:bootstrap
 blaze-html-templates
 autopublish@1.0.7
+accounts-password
+ian:accounts-ui-bootstrap-3

@@ -44,25 +44,30 @@
     <hr>
     <div class="database">
       <h2>Our Database of Products</h2><br>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <td>Type&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sorttype"></span></td>
-          <td>Brand&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortbrand"></span></td>
-          <td>Name&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortname"></span></td>
-          <td>Delete?</td>
-        </tr>
-      </thead>
-      {{#each p in productlist}}
-      <tbody>
-        {{> productrow prod = p}}
-      </tbody>
-      {{/each}}
-    </table>
-    <hr>
-  </div>
+      {{#if currentUser}}
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <td>Type&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sorttype"></span></td>
+            <td>Brand&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortbrand"></span></td>
+            <td>Name&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true" id="sortname"></span></td>
+            <td>Delete?</td>
+          </tr>
+        </thead>
+        {{#each p in productlist}}
+        <tbody>
+          {{> productrow prod = p}}
+        </tbody>
+        {{/each}}
+      </table>
+      <hr>
+      {{else}}
+      <h1>You Must Login To See This Page</h1>
+      {{/if}}
+    </div>
 
   <div class="newproduct">
+    {{#if currentUser}}
     <form>
       <h2>Add Your Product to the Database</h2>
       Product Type
@@ -85,6 +90,7 @@
       <br>
       <button type="button" class="btn btn-primary btn-group-lg" id="addproduct">Submit</button>
     </form>
+    {{/if}}
   </div>
 </template>
 
