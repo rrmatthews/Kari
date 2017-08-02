@@ -1,3 +1,8 @@
+Template.feedback.onCreated(function() {
+  //this.state = new ReactiveDict();
+  Meteor.subscribe('feedback');
+})
+
 Template.feedback.helpers({
   feedbacklist() {return Feedback.find()}
 })

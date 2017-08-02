@@ -18,6 +18,5 @@ shell-server@0.2.4            # Server-side component of the `meteor shell` comm
 iron:router
 twbs:bootstrap
 blaze-html-templates
-autopublish@1.0.7
 accounts-password
 ian:accounts-ui-bootstrap-3

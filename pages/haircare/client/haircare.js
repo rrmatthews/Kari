@@ -1,3 +1,8 @@
+Template.haircare.onCreated(function() {
+  //this.state = new ReactiveDict();
+  Meteor.subscribe('products');
+})
+
 Template.haircare.helpers({
   hairline() {return Hair.find()},
   productlist() {return Products.find()}
