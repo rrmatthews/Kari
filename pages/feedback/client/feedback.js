@@ -25,7 +25,8 @@ Template.feedback.events({
           Name:name,Feedback:textarea
         };
       console.log(info);
-      Meteor.call('Feedback.insert',info);
+      Meteor.call('Feedback.update',info);
+      // Meteor.call('Feedback.insert',info);
       console.log("done");
     } else {
       console.log('Invalid Entry...field is blank?');
