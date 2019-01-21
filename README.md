@@ -1,4 +1,4 @@
-# Kari (PersonalApp)
+# Kari
 This Meteor web app was created as a part of the 2017 Voice, Web, Mobile App Design JBS Semester at Brandeis University under the instuction of Tim Hickey and Marie Meteer as a means of learning and exploring the web development.
 
 ## About the Web App
