@@ -10,7 +10,11 @@ I wanted to design and create a web app that centers black women while highlight
 Currently, the app serves as a place for black women to upload the hair products they use into a database to be accessed by other users. It also has a section devoted to hair care tips and styles separated by black hair texture/type.
 
 ## Using the App
-To use the app, use terminal / command prompt to work inside the main directory. Type "meteor run" into the command line and the web app will be loaded onto localhost:3000. To access the web app, go to "localhost:3000" in any web browser. 
+To use the app:
+1) Download or clone this repository
+2) Open terminal/command prompt and navigate to the working directory
+3) Run `meteor run`
+4) Go to `localhost:3000` in any web browser to use the application
 
 ## Tools
 * HTML / CSS
